@@ -3,7 +3,7 @@
 Hedef: Segmentasyon ve sınıflandırma derin öğrenme modelleri kullanılarak insan ve araba tespiti
 yapan bir uygulamanın geliştirilmesi.
 
-Visea-Project.py dosyasinda projenin kendisi bulunmaktadir.
+Visea-Project.ipynb dosyasinda projenin kendisi bulunmaktadir.
 
 ![orji](https://user-images.githubusercontent.com/83323146/230279912-33deba46-2659-48b8-baa6-98a3ddaf586b.jpg)
 
