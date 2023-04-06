@@ -1,32 +1,36 @@
+
+# Bu py dosyasindaki segmentastonlar derin ogrenme kullanmadan yapilabilir mi sorusu icin yapilmistir.
+# Tabi kii basarili olmadi bu sekilde :))
+
 '''
 
 import cv2
 import numpy as np
 
-# Görüntüyü oku
+# GÃ¶rÃ¼ntÃ¼yÃ¼ oku
 image = cv2.imread("C:/Users/Mert/Desktop/VISEA/Train/Yeni_Images/train_0.png")
 
-# Görüntüyü HSV renk uzayına dönüştür
+# GÃ¶rÃ¼ntÃ¼yÃ¼ HSV renk uzayÃ½na dÃ¶nÃ¼Ã¾tÃ¼r
 hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-# Araç ve insan renk aralığını belirle
-lower_vehicle_color = np.array([0, 0, 0], dtype=np.uint8)  # Örnek bir araç rengi
-upper_vehicle_color = np.array([180, 255, 50], dtype=np.uint8)  # Örnek bir araç rengi
-lower_human_color = np.array([0, 20, 70], dtype=np.uint8)  # Örnek bir insan rengi
-upper_human_color = np.array([20, 255, 255], dtype=np.uint8)  # Örnek bir insan rengi
+# AraÃ§ ve insan renk aralÃ½Ã°Ã½nÃ½ belirle
+lower_vehicle_color = np.array([0, 0, 0], dtype=np.uint8)  # Ã–rnek bir araÃ§ rengi
+upper_vehicle_color = np.array([180, 255, 50], dtype=np.uint8)  # Ã–rnek bir araÃ§ rengi
+lower_human_color = np.array([0, 20, 70], dtype=np.uint8)  # Ã–rnek bir insan rengi
+upper_human_color = np.array([20, 255, 255], dtype=np.uint8)  # Ã–rnek bir insan rengi
 
-# Renk aralığına göre bir maske oluştur
+# Renk aralÃ½Ã°Ã½na gÃ¶re bir maske oluÃ¾tur
 vehicle_mask = cv2.inRange(hsv_image, lower_vehicle_color, upper_vehicle_color)
 human_mask = cv2.inRange(hsv_image, lower_human_color, upper_human_color)
 
-# Maskeyi görüntüye uygula
+# Maskeyi gÃ¶rÃ¼ntÃ¼ye uygula
 segmented_vehicle = cv2.bitwise_and(image, image, mask=vehicle_mask)
 segmented_human = cv2.bitwise_and(image, image, mask=human_mask)
 
-# Sonuçları göster
-cv2.imshow("Orjinal Görüntü", image)
-cv2.imshow("Araç Segmentasyonu", segmented_vehicle)
-cv2.imshow("İnsan Segmentasyonu", segmented_human)
+# SonuÃ§larÃ½ gÃ¶ster
+cv2.imshow("Orjinal GÃ¶rÃ¼ntÃ¼", image)
+cv2.imshow("AraÃ§ Segmentasyonu", segmented_vehicle)
+cv2.imshow("Ãnsan Segmentasyonu", segmented_human)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
@@ -38,30 +42,30 @@ cv2.destroyAllWindows()
 import cv2
 import numpy as np
 
-# Görüntüyü oku
+# GÃ¶rÃ¼ntÃ¼yÃ¼ oku
 image = cv2.imread("C:/Users/Mert/Desktop/VISEA/Train/Yeni_Images/train_0.png")
 
-# Görüntüyü HSV renk uzayına dönüştür
+# GÃ¶rÃ¼ntÃ¼yÃ¼ HSV renk uzayÃ½na dÃ¶nÃ¼Ã¾tÃ¼r
 hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-# Araç ve insan renk aralığını belirle
-lower_vehicle_color = np.array([0, 0, 0], dtype=np.uint8)  # Örnek bir araç rengi
-upper_vehicle_color = np.array([180, 255, 50], dtype=np.uint8)  # Örnek bir araç rengi
-lower_human_color = np.array([0, 20, 70], dtype=np.uint8)  # Örnek bir insan rengi
-upper_human_color = np.array([20, 255, 255], dtype=np.uint8)  # Örnek bir insan rengi
+# AraÃ§ ve insan renk aralÃ½Ã°Ã½nÃ½ belirle
+lower_vehicle_color = np.array([0, 0, 0], dtype=np.uint8)  # Ã–rnek bir araÃ§ rengi
+upper_vehicle_color = np.array([180, 255, 50], dtype=np.uint8)  # Ã–rnek bir araÃ§ rengi
+lower_human_color = np.array([0, 20, 70], dtype=np.uint8)  # Ã–rnek bir insan rengi
+upper_human_color = np.array([20, 255, 255], dtype=np.uint8)  # Ã–rnek bir insan rengi
 
-# Renk aralığına göre bir maske oluştur
+# Renk aralÃ½Ã°Ã½na gÃ¶re bir maske oluÃ¾tur
 vehicle_mask = cv2.inRange(hsv_image, lower_vehicle_color, upper_vehicle_color)
 human_mask = cv2.inRange(hsv_image, lower_human_color, upper_human_color)
 
-# Maskeyi görüntüye uygula
+# Maskeyi gÃ¶rÃ¼ntÃ¼ye uygula
 segmented_vehicle = cv2.bitwise_and(image, image, mask=vehicle_mask)
 segmented_human = cv2.bitwise_and(image, image, mask=human_mask)
 
-# Sonuçları göster
-cv2.imshow("Orjinal Görüntü", image)
-cv2.imshow("Araç Segmentasyonu", segmented_vehicle)
-cv2.imshow("İnsan Segmentasyonu", segmented_human)
+# SonuÃ§larÃ½ gÃ¶ster
+cv2.imshow("Orjinal GÃ¶rÃ¼ntÃ¼", image)
+cv2.imshow("AraÃ§ Segmentasyonu", segmented_vehicle)
+cv2.imshow("Ãnsan Segmentasyonu", segmented_human)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
@@ -73,31 +77,31 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 import cv2
 
-# Görüntüyü oku
+# GÃ¶rÃ¼ntÃ¼yÃ¼ oku
 image = cv2.imread("C:/Users/Mert/Desktop/VISEA/Train/Yeni_Images/train_0.png")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-# Görüntüyü tensöre dönüştür
+# GÃ¶rÃ¼ntÃ¼yÃ¼ tensÃ¶re dÃ¶nÃ¼Ã¾tÃ¼r
 transform = transforms.Compose([
     transforms.ToTensor()
 ])
 image_tensor = transform(image)
-image_tensor = torch.unsqueeze(image_tensor, 0)  # Batch boyutunu ekleyerek tensörü 4D hale getir
+image_tensor = torch.unsqueeze(image_tensor, 0)  # Batch boyutunu ekleyerek tensÃ¶rÃ¼ 4D hale getir
 
-# Evrişimli sinir ağı (CNN) modelini yükle
+# EvriÃ¾imli sinir aÃ°Ã½ (CNN) modelini yÃ¼kle
 model = models.segmentation.deeplabv3_resnet101(pretrained=True)
 model.eval()
 
-# Görüntüyü modelde ileri geçir ve tahminleri al
+# GÃ¶rÃ¼ntÃ¼yÃ¼ modelde ileri geÃ§ir ve tahminleri al
 with torch.no_grad():
     output = model(image_tensor)['out']
-    output = torch.argmax(output, dim=1)  # Sınıf indekslerini al
+    output = torch.argmax(output, dim=1)  # SÃ½nÃ½f indekslerini al
 
-# Sınıf indekslerini numpy dizisine dönüştür
+# SÃ½nÃ½f indekslerini numpy dizisine dÃ¶nÃ¼Ã¾tÃ¼r
 segmented_image = output.numpy()[0]
 
-# Sonuçları göster
-cv2.imshow("Orjinal Görüntü", cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
+# SonuÃ§larÃ½ gÃ¶ster
+cv2.imshow("Orjinal GÃ¶rÃ¼ntÃ¼", cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
 cv2.imshow("Segmentasyon Sonucu", segmented_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
