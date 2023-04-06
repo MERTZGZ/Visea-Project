@@ -1,9 +1,3 @@
-# YOLOv8, girdi olarak görüntülerin belirli bir boyutta olmasını bekler.
-# Bu boyut, ağın arka planda yapılandırılmasına bağlıdır.
-# Genellikle, YOLOv8 girdi görüntülerinin 448 x 448 piksel boyutunda olması beklenir.
-# Ancak, bu değer değişebilir ve başka bir değer de kullanılabilir.
-# Her resmin boyutu farklı olduğu için, resimleri ortak bir boyuta dönüştürmeniz gerekir.
-
 import cv2
 import os
 import glob
