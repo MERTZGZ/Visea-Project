@@ -1,3 +1,16 @@
+"""
+Bu Python kodu, belirtilen bir klasördeki tüm PNG dosyalarının boyutlarını kontrol eder ve en büyük ve en küçük boyutlu dosyaları belirler. Ayrıca, her bir dosyanın orijinal boyutunu bir metin dosyasına yazar.
+
+İlk olarak, "cv2" ve "os" kütüphaneleri ve "glob" modülü içe aktarılır. Ardından, klasör yolunu belirten bir değişken tanımlanır ve "glob.glob" kullanılarak klasördeki tüm PNG dosyaları bir listeye aktarılır.
+
+Sonra, "max_width", "max_height", "max_file" değişkenleri en büyük boyutlu dosyayı ve "min_width", "min_height", "min_file" değişkenleri en küçük boyutlu dosyayı belirlemek için kullanılır. Ardından, her bir PNG dosyasının boyutunu kontrol etmek için bir döngü oluşturulur. Her dosyanın orijinal boyutu bir metin dosyasına yazılır ve en büyük ve en küçük boyutlu dosyalar belirlenir.
+
+Son olarak, en büyük ve en küçük boyutlu dosyaların yolu ve boyutu da metin dosyasına yazılır.
+
+Bu kod, görüntü işleme uygulamaları için kullanılabilen bir temel bilgi sağlar ve veri setindeki görüntülerin boyutları hakkında fikir edinmek için kullanılabilir.
+
+"""
+
 import cv2
 import os
 import glob
