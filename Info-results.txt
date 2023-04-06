@@ -1,0 +1,25 @@
+Train/box_loss, train/seg_loss, train/cls_loss ve train/dfl_loss:
+Bu grafikler, eğitim sırasında modelin kayıplarını gösterir. Kayıpların düşmesi, modelin daha iyi öğrenmesini ve daha iyi sonuçlar vermesini sağlar.
+Eğer kayıplar düşmez veya yükselirse, modelin daha fazla öğrenmesi gerekebilir veya eğitim verilerinde hata olabilir.
+
+Metrics/precision(B), metrics/recall(B), metrics/mAP50(B) ve metrics/mAP50-95(B):
+Bu grafikler, doğrulama verileri için performans ölçütlerini gösterir. Precision, recall ve mAP50/95, 
+modelin doğruluğunu ve hassasiyetini ölçer. Daha yüksek bir precision, modelin daha az yanlış pozitif sonuç ürettiğini gösterirken, daha yüksek bir recall, modelin daha az yanlış negatif sonuç ürettiğini gösterir. mAP50/95, modelin nesneleri bulma becerisini ölçer. Daha yüksek bir mAP50/95, modelin daha iyi bir şekilde nesneleri bulduğunu gösterir.
+
+Metrics/precision(M), metrics/recall(M) ve metrics/mAP50(M) ve metrics/mAP50-95(M):
+Bu grafikler, küçük nesneler için precision, recall ve mAP50/95 performans ölçütlerini gösterir.
+Küçük nesnelerin tanınması, büyük nesnelerden daha zor olabilir. Bu nedenle, bu grafikler, modelin küçük nesneleri tanıma becerisini ölçmek için önemlidir.
+
+Val/box_loss, val/seg_loss, val/cls_loss ve val/dfl_loss:
+Bu grafikler, doğrulama verileri için modelin kayıplarını gösterir. Eğitim sırasında, modelin eğitim verileri üzerinde iyi sonuçlar vermesi 
+ama doğrulama verileri üzerinde kötü sonuçlar vermesi overfitting (aşırı öğrenme) olarak adlandırılır. Bu grafikler, 
+modelin doğrulama verilerinde de iyi bir performans gösterip göstermediğini gösterir.
+
+Lr/pg0, Lr/pg1 ve Lr/pg2:
+Bu grafikler, modelin öğrenme oranlarını gösterir. Öğrenme oranları, modelin eğitimi sırasında ne kadar hızlı öğrendiğini kontrol eder.
+Eğer öğrenme oranı çok yüksekse, model hızlı bir şekilde öğrenebilir ancak yanlış sonuçlar dönebilir. 
+Bu nedenle, öğrenme oranının doğru bir şekilde ayarlanması önemlidir.
+
+Epochs:
+Bu grafik, modelin her bir epoch (bir kez tüm verilerin eğitildiği süre) sırasında performansını gösterir. 
+Modelin daha fazla epoch eğitilmesi, daha iyi sonuçlar elde etmesine yardımcı olabilir ancak aynı zamanda overfitting riskini de artırabilir.
