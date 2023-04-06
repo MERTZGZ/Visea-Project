@@ -5,9 +5,11 @@
 """
 Bu kod blokları, bir görüntü üzerinde nesne tespiti ve görüntü segmentasyonu işlemlerini gerçekleştirmek için kullanılır.
 
-İlk kod bloğu, OpenCV kütüphanesi kullanarak bir görüntüyü okur, görüntüyü HSV renk uzayına dönüştürür ve belirli renk aralıklarına göre bir nesne maskesi oluşturur. Ardından, bu maskeleri orijinal görüntüye uygulayarak nesne segmentasyonu yapar ve sonuçları görselleştirir.
+İlk kod bloğu, OpenCV kütüphanesi kullanarak bir görüntüyü okur, görüntüyü HSV renk uzayına dönüştürür ve belirli renk aralıklarına göre bir nesne maskesi oluşturur. 
+Ardından, bu maskeleri orijinal görüntüye uygulayarak nesne segmentasyonu yapar ve sonuçları görselleştirir.
 
-İkinci kod bloğu, PyTorch kütüphanesi kullanarak bir görüntüyü okur, görüntüyü bir tensöre dönüştürür ve bir önceden eğitilmiş bir derin öğrenme modeli olan DeepLabV3'ü kullanarak görüntü segmentasyonu yapar. Son olarak, segmente edilmiş görüntüyü görselleştirir.
+İkinci kod bloğu, PyTorch kütüphanesi kullanarak bir görüntüyü okur, görüntüyü bir tensöre dönüştürür ve bir önceden eğitilmiş bir derin öğrenme modeli olan
+DeepLabV3'ü kullanarak görüntü segmentasyonu yapar. Son olarak, segmente edilmiş görüntüyü görselleştirir.
 
 """
 '''
